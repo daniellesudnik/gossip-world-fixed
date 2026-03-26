@@ -22,6 +22,9 @@ services:
     external_links:
       - mysqldb-a7:mysqldb-a7
     restart: always
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
     
   mysqldb-a7:
     container_name: mysqldb-a7
