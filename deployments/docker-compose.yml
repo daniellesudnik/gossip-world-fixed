@@ -40,6 +40,9 @@ services:
       - a7_net
     volumes:
       - storage-a7-database:/var/lib/mysql
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
 
 volumes:
   storage-a7-database:
